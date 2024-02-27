@@ -35,20 +35,54 @@ public class PhanSo {
         return "P = " + t + "/" + m;
     }
 
-    public double tong(PhanSo ps2) {
-        return (double) this.t / this.m + (double) ps2.getT() / ps2.getM();
+//    public double tong(PhanSo ps2) {
+//        return (double) this.t / this.m + (double) ps2.getT() / ps2.getM();
+//    }
+//
+//    public double hieu(PhanSo ps2) {
+//        return (double) this.t / this.m - (double) ps2.getT() / ps2.getM();
+//    }
+//
+//    public double tich(PhanSo ps2) {
+//        return (double) this.t / this.m * ps2.getT() / ps2.getM();
+//    }
+//
+//    public double thuong(PhanSo ps2) {
+//        return (double) this.t * ps2.getM() / this.m * ps2.getT();
+//    }
+
+    public PhanSo tong(PhanSo ps2) {
+        int T = this.t * ps2.m + this.m * ps2.t;
+        int M = this.m * ps2.m;
+        return new PhanSo(T, M);
     }
 
-    public double hieu(PhanSo ps2) {
-        return (double) this.t / this.m - (double) ps2.getT() / ps2.getM();
+    public PhanSo hieu(PhanSo ps2) {
+        int T = this.t * ps2.m - this.m * ps2.t;
+        int M = this.m * ps2.m;
+        return new PhanSo(T, M);
     }
 
-    public double tich(PhanSo ps2) {
-        return (double) this.t / this.m * ps2.getT() / ps2.getM();
+    public PhanSo tich(PhanSo ps2) {
+        int T = this.t * ps2.t;
+        int M = this.m * ps2.m;
+        return new PhanSo(T, M);
     }
 
-    public double thuong(PhanSo ps2) {
-        return (double) this.t * ps2.getM() / this.m * ps2.getT();
+
+    public PhanSo thuong(PhanSo ps2) {
+        int T = this.t * ps2.m;
+        int M = this.m * ps2.t;
+        return new PhanSo(T, M);
+    }
+
+    public double giaTri() {
+        return (double) this.t / this.m;
+    }
+
+    public Boolean soSanh(PhanSo ps2) {
+        if (this.giaTri() > ps2.giaTri()) return true;
+        return false;
     }
 
     private int gcd() {
@@ -67,9 +101,15 @@ public class PhanSo {
         return 1;
     }
 
+
     public void rutGon() {
         int uocChung = gcd();
         this.t = t / uocChung;
         this.m = m / uocChung;
+
+    }
+
+    public PhanSo khongNguyen() {
+        return new PhanSo(this.t % this.m, this.m);
     }
 }

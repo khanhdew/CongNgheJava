@@ -67,5 +67,11 @@ public class Bai3 {
             System.out.println(s1.toString());
         }
 
+        Triangle triangle = new Triangle(new Point2D(1,2),
+                new Point2D(4,5),
+                new Point2D(3,4));
+        System.out.println(triangle.area());
+
+
     }
 }
