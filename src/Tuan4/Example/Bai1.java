@@ -20,7 +20,7 @@ public class Bai1 {
         lPoints.add(p4);
         List<Point2D> lPointsDX = new ArrayList<>();
         for (Point2D p : lPoints) {
-            System.out.println(p.toString());
+            System.out.println(p);
             lPointsDX.add(p.doiXung());
         }
 
@@ -29,7 +29,7 @@ public class Bai1 {
         System.out.println("Diem doi xung");
 
         for (Point2D p : lPointsDX) {
-            System.out.println(p.toString());
+            System.out.println(p);
         }
     }
 

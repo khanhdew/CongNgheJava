@@ -64,7 +64,7 @@ public class Bai3 {
         Shape s1 = shapes.get(1);
         if (!(s1 instanceof Point2D)) {
             s1.zoom(1.83);
-            System.out.println(s1.toString());
+            System.out.println(s1);
         }
 
         Triangle triangle = new Triangle(new Point2D(1,2),

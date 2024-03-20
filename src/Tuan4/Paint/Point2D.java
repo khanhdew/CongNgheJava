@@ -50,7 +50,7 @@ public class Point2D implements Shape {
 
     @Override
     public double distance(Point2D p2) {
-        return Math.sqrt(Math.pow(this.x - p2.x, 2) + Math.pow((this.y - p2.y),2));
+        return Math.sqrt(Math.pow(this.x - p2.x, 2) + Math.pow((this.y - p2.y), 2));
     }
 
     @Override
@@ -61,8 +61,8 @@ public class Point2D implements Shape {
 
     @Override
     public void rotate(double alpha) {
-        this.x = (this.x*Math.cos(alpha) - this.y*Math.sin(alpha));
-        this.y = (this.x*Math.sin(alpha) + this.y*Math.cos(alpha));
+        this.x = (this.x * Math.cos(alpha) - this.y * Math.sin(alpha));
+        this.y = (this.x * Math.sin(alpha) + this.y * Math.cos(alpha));
     }
 
     @Override

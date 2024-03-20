@@ -29,11 +29,11 @@ public class SoPhuc {
     public String toString() {
         return "SoPhuc{" +
                 "phanThuc = " + phanThuc +
-                ", phanAo = " + phanAo +"i"+
+                ", phanAo = " + phanAo + "i" +
                 '}';
     }
 
-    public SoPhuc tong(SoPhuc sp2){
+    public SoPhuc tong(SoPhuc sp2) {
         return new SoPhuc(this.phanThuc + sp2.phanThuc, this.phanAo + sp2.phanAo);
     }
 
@@ -41,6 +41,10 @@ public class SoPhuc {
         return Math.sqrt(Math.pow(phanThuc, 2) + Math.pow(phanAo, 2));
     }
 
+
+    public SoPhuc chia(Double a) {
+        return new SoPhuc(this.phanThuc / a, this.phanAo / a);
+    }
 
 
 }
