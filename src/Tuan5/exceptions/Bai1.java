@@ -25,7 +25,7 @@ public class Bai1 {
         }
     }
 
-    public void input() throws InvalidNumberException, ArrayIndexOutOfBoundsException {
+    public void input() throws InvalidNumberException {
         int n;
         try (Scanner scanner = new Scanner(System.in)) {
             try {
@@ -33,11 +33,12 @@ public class Bai1 {
             } catch (InputMismatchException e) {
                 throw new InvalidNumberException("Ban da nhap sai gia tri n");
             }
-            if (n < 0 || n >= arr.length)
-                throw new ArrayIndexOutOfBoundsException("Ban da truy cap phan tu ngoai mang");
-            else {
-                System.out.println("Phan tu thu " + n + " co gia tri = " + arr[n]);
-            }
+//            if (n < 0 || n >= arr.length)
+//                throw new ArrayIndexOutOfBoundsException("Ban da truy cap phan tu ngoai mang");
+//            else {
+//                System.out.println("Phan tu thu " + n + " co gia tri = " + arr[n]);
+//            }
+            System.out.println("Phan tu thu " + n + " co gia tri = " + arr[n]);
         }
     }
 
